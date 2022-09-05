@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda</title>
+    <base href="/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+  <body
+    class="hold-transition sidebar-mini layout-fixed page-top"
+    style="overflow-x: hidden"
+  >
+    <app-root></app-root>
+  </body>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      let stars = document.getElementById("stars"),
+        stars2 = document.getElementById("stars2"),
+        moon = document.getElementById("moon"),
+        rock = document.getElementById("rock"),
+        masjid = document.getElementById("masjid"),
+        text = document.getElementById("text"),
+        header = document.getElementById("header"),
+        toggleMenu = document.querySelector(".toggle"),
+        navigation = document.querySelector(".navigation"),
+        value = window.scrollY / 3;
+
+      stars.style.bottom = value * 0.05 + "%";
+      stars2.style.bottom = value * 0.025 + "%";
+
+      moon.style.bottom = value * -0.5 + "px";
+      rock.style.bottom = value * -0.75 + "px";
+      masjid.style.bottom = value * -0.15 + "px";
+
+      if (window.screen.availWidth > 1300) text.style.right = -30 + value + "%";
+      else text.style.right = -50 + value + "%";
+      
+      text.style.top = 20 + value * 0.4 + "%";
+
+      if (window.scrollY == 0) text.style.right = -100 + value + "%";
+
+      header.style.top = value * 0.5 + "px";
+
+      toggleMenu.onclick = function () {
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      };
+    });
+  </script>
+</html>
