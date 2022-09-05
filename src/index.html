@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tienda</title>
+    <title>Eid-Mubarak</title>
     <base href="/" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
   </head>
   <body
     class="hold-transition sidebar-mini layout-fixed page-top"
@@ -37,10 +43,10 @@
 
       if (window.screen.availWidth > 1300) text.style.right = -30 + value + "%";
       else text.style.right = -50 + value + "%";
-      
+
       text.style.top = 20 + value * 0.4 + "%";
 
-      if (window.scrollY == 0) text.style.right = -100 + value + "%";
+      if (window.scrollY <= 5) text.style.right = -100 + value + "%";
 
       header.style.top = value * 0.5 + "px";
 

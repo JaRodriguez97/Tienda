@@ -1,16 +1,18 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { InicioComponent } from "./components/inicio/inicio.component";
+import { LandingComponent } from "./components/landing/landing.component";
+import { ContactComponent } from "./components/contact/contact.component";
+import { ProductosComponent } from "./components/productos/productos.component";
+import { AboutComponent } from "./components/about/about.component";
 
 const routes: Routes = [];
 
 routes.push(
-  { path: "", redirectTo: "inicio", pathMatch: "full" },
-  // { path: "portafolio", redirectTo: "index", pathMatch: "full" },
-  { path: "inicio", component: InicioComponent }
-  // { path: "servicios", component: ServiciosComponent },
-  // { path: "testimonios", component: TestimoniosComponent },
-  // { path: "contactanos", component: ContactanosComponent }
+  { path: "", redirectTo: "landing", pathMatch: "full" },
+  { path: "landing", component: LandingComponent },
+  { path: "productos", component: ProductosComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "about", component: AboutComponent }
 );
 
 @NgModule({
